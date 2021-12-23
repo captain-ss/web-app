@@ -6,11 +6,15 @@ import svg2 from "../images/security_SVG 1.svg";
 import svg3 from "../images/Phone 1.svg";
 import facebook from "../images/FacebookLogo.svg";
 import instagram from "../images/InstagramLogo.svg";
-import stwitter from "../images/TwitterLogo.svg";
+import twitter from "../images/TwitterLogo.svg";
+import union from "../images/Union.svg";
+import clipboardtext from "../images/ClipboardText.svg";
+import printer from "../images/Printer.svg";
+import shield from "../images/ShieldCheck.svg";
 
 function Navbar() {
   return (
-    <>
+    < div className="maindiv">
       <div className="main-container">
         <nav className="container">
           <img src={icon} alt="Not find" className="title-image" />
@@ -52,6 +56,38 @@ function Navbar() {
           this Data Warehouse.
         </div>
       </box2>
+      <box2_5 className="box2-5">
+        <div className="boxes2-5">
+          <img src={clipboardtext} alt="" className="img2-5" />
+          <div className="">search</div>
+          <div>
+            Don’t worry if your data is very large, Insignia provides a search
+            engine, which is useful for making it easier to find data
+            effectively saving time.
+          </div>
+          <div>Learn more</div>
+        </div>
+        <div className="boxes2-5">
+          <img src={printer} alt="" className="img2-5 " />
+          <div>Printout</div>
+          <p>
+            Print out service gives you convenience if someday you need print
+            data, just edit it all and just print it.
+          </p>
+          <div>Learn more</div>
+        </div>
+        <div className="boxes2-5">
+          <img src={shield} alt="" className="img2-5" />
+          <div>Security code</div>
+          <p>
+            Data Security is one of our best facilities. Allows for your files
+            to be safer. The file can be secured with a code or password that
+            you created, so only you can open the file.
+          </p>
+
+          <div>Learn more</div>
+        </div>
+      </box2_5>
       <box3 className="box3">
         <img src={svg3} alt="" className="svg3" />
         <div className="heading3">Download Our App</div>
@@ -89,6 +125,7 @@ function Navbar() {
             © Insignia™, 2020. All rights reserved.
           </div>
         </div>
+        <div style={{display:"flex",flexDirection:"row",justifyContent:"center"}}>
         <div className="container2">
           <ul>
             <ul className="text  list1 ">About</ul>
@@ -97,6 +134,7 @@ function Navbar() {
             <ul className="text list4">careers</ul>
             <ul className="text list5">dw news</ul>
           </ul>
+        </div>
         </div>
         <div className="container3">
           <ul>
@@ -109,18 +147,34 @@ function Navbar() {
           </ul>
         </div>
         <div className="container4">
-          <div className="social-media text">Social media  </div>
-          <div style={{display:"flex"}}>
-          <div className="boxes">
-              <img src={facebook} alt=""  className="image2"/>
+          <div className="social-media text">Social media </div>
+          <div style={{ display: "flex" }}>
+            <div className="boxes">
+              <img src={facebook} alt="" className="image2" />
+            </div>
+            <div className="boxes">
+              <img src={instagram} alt="" />
+            </div>
+            <div className="boxes">
+              <img src={twitter} alt="" />
+            </div>
           </div>
-          <div className="boxes"></div>
-          <div className="boxes"></div>
+          <div className="boxes  messege-box ">
+            <div
+              style={{
+                position: "relative",
+                left: "20px",
+                bottom: "5px",
+                color: "#E5E5E5",
+              }}
+            >
+              ...
+            </div>
+            <img src={union} alt="" />
           </div>
-          <div className="boxes"></div>
         </div>
       </lastbox>
-    </>
+    </div>
   );
 }
 
