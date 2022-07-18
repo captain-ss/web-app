@@ -12,7 +12,9 @@ import union from "../../images/Union.svg";
 import clipboardtext from "../../images/ClipboardText.svg";
 import printer from "../../images/Printer.svg";
 import shield from "../../images/ShieldCheck.svg";
+import ArrowIcon1 from "../../images/ArrowIcon1.svg";
 import Slider from "react-slick";
+
 function Navbar() {
   const settings = {
     arrows: false,
@@ -73,20 +75,23 @@ function Navbar() {
           style={{
             background:
               "radial-gradient(38.2% 50% at 50% 50%, #2E3134 0%, #292B2E 100%)",
-              padding:"4vw ",
-              borderRadius:"2vw",
-              overflow:"visible",
-              width:"60vw",
-              margin:"4vw 0vw 4vw 14vw"
-            
+            padding: "4vw ",
+            // boxShadow: "inset -9px -9px 10px #000000",
+            // boxShadow: "inset 9px 9px 10px #000000",
+            border: "1px solid gray",
+
+            borderRadius: "2vw",
+            overflow: "visible",
+            width: "60vw",
+            margin: "4vw 0vw 4vw 14vw",
           }}
         >
-          <div className="small-text-1 "
-          
-          style={{
-            fontSize:"2vw",
-            margin:"2vw 0vw"
-          }}
+          <div
+            className="small-text-1 "
+            style={{
+              fontSize: "2vw",
+              margin: "2vw 0vw",
+            }}
           >
             Features
           </div>
@@ -97,44 +102,65 @@ function Navbar() {
               overflow: "visible",
             }}
           >
-            
             <div>
               <div className="boxes2-5">
                 <img src={clipboardtext} alt="" className="img2-5" />
                 <div className="small-text-1">Search Data</div>
-                <div
-                 className="color-w"
-                >
+                <div className="color-w">
                   Don’t worry if your data is very large insignia provides a
                   search engine, which is useful for making it easier to find
                   data effectively saving time.
                 </div>
-                <div className="small-text-1">Learn more</div>
+                <div
+                  className="small-text-1"
+                  style={{
+                    display: "flex",
+                    gap: "1vw",
+                  }}
+                >
+                  Learn more
+                  <img src={ArrowIcon1} alt="" />
+                </div>
               </div>
             </div>
             <div>
               <div className="boxes2-5">
                 <img src={clipboardtext} alt="" className="img2-5" />
                 <div className="small-text-1">Search Data</div>
-                <div
-                className="color-w"
-                >
+                <div className="color-w">
                   Don’t worry if your data is very large insignia provides a
                   search engine, which is useful for making it easier to find
                   data effectively saving time.
                 </div>
-                <div className="small-text-1">Learn more</div>
+                <div
+                  className="small-text-1"
+                  style={{
+                    display: "flex",
+                    gap: "1vw",
+                  }}
+                >
+                  Learn more
+                  <img src={ArrowIcon1} alt="" />
+                </div>
               </div>
             </div>
             <div>
               <div className="boxes2-5">
                 <img src={printer} alt="" className="img2-5 " />
                 <div className="small-text-1">Printout</div>
-                <p  className="color-w">
+                <p className="color-w">
                   Print out service gives you convenience if someday you need
                   print data, just edit it all and just print it.
                 </p>
-                <div className="small-text-1">Learn more</div>
+                <div
+                  className="small-text-1"
+                  style={{
+                    display: "flex",
+                    gap: "1vw",
+                  }}
+                >
+                  Learn more <img src={ArrowIcon1} alt="" />
+                </div>
               </div>
             </div>
 
@@ -142,37 +168,95 @@ function Navbar() {
               <div className="boxes2-5">
                 <img src={shield} alt="" className="img2-5" />
                 <div className="small-text-1">Security code</div>
-                <p  className="color-w">
+                <p className="color-w">
                   Data Security is one of our best facilities. Allows for your
                   files to be safer. The file can be secured with a code or
                   password that you created, so only you can open the file.
                 </p>
 
-                <div className="small-text-1"
-              
-                >Learn more</div>
+                <div
+                  className="small-text-1"
+                  style={{
+                    display: "flex",
+                    gap: "1vw",
+                  }}
+                >
+                  Learn more
+                  <img src={ArrowIcon1} alt="" />
+                </div>
               </div>
             </div>
           </Slider>
         </div>
       </box2_5>
-      <box3 className="box3"
-      style={{
-        backgroundColor:"yellow"
-      }}
+      <box3
+        className="box3"
+        style={{
+          boxShadow: " inset 2px 2px 10px rgba(0, 0, 0, 0.3)",
+          display: "flex",
+          width: "70vw",
+          height: "35vw",
+          marginTop: "4vw",
+          marginBottom: "8vw",
+          backgroundColor: "292B2E50",
+          marginLeft: "15vw",
+          borderRadius: "2vw",
+          boxSizing: "border-box",
+          padding: "4vw",
+        }}
       >
-        <img src={svg3} alt="" className="svg3" />
-        <div className="heading3">Download Our App</div>
-        <div className="content3 ">
-          The place to store various data that you can access at any time
-          through the internet and where you can carry it. This very flexible
-          storage area has a high level of security. To enter into your own data
-          you must enter the password that you created when you registered in
-          this Data Warehouse.=
+        <div
+          style={{
+            width: "40%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          }}
+        >
+          <div
+            className="small-text-1"
+            style={{
+              fontSize: "2vw",
+            }}
+          >
+            Download Our App
+          </div>
+          <div
+            className="color-w "
+            style={{
+              lineHeight: "1.5vw",
+              fontSize: "1.2vw",
+            }}
+          >
+            The place to store various data that you can access at any time
+            through the internet and where you can carry it.
+            <br />
+            This very flexible storage area has a high level of security. To
+            enter into your own data you must enter the password that you
+            created when you registered in this Data Warehouse.=
+          </div>
+          <div className="btn">Download</div>
         </div>
-        <div className="download">Download</div>
+        <div
+          style={{
+            width: "40%",
+          }}
+        >
+          <img
+            src={svg3}
+            alt=""
+            style={{
+              position: "relative",
+              bottom: "13vw",
+            }}
+            className="svg3"
+          />
+        </div>
       </box3>
-
+      <div>
+        
+      
+      </div>
       <hr className="line" />
       <box5 className="box5">
         {/* <img src={icon} alt=""  className="title-image"/> */}
