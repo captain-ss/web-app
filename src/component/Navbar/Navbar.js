@@ -1,20 +1,32 @@
-import React from "react";
-import "./Navbar.css";
-import icon from "../images/Abstract Circle 1.svg";
-import svg1 from "../images/Cloud_database_Svg 1.svg";
-import svg2 from "../images/security_SVG 1.svg";
-import svg3 from "../images/Phone 1.svg";
-import facebook from "../images/FacebookLogo.svg";
-import instagram from "../images/InstagramLogo.svg";
-import twitter from "../images/TwitterLogo.svg";
-import union from "../images/Union.svg";
-import clipboardtext from "../images/ClipboardText.svg";
-import printer from "../images/Printer.svg";
-import shield from "../images/ShieldCheck.svg";
+import React, { Component } from "react";
 
+import "./Navbar.css";
+import icon from "../../images/Abstract Circle 1.svg";
+import svg1 from "../../images/Cloud_database_Svg 1.svg";
+import svg2 from "../../images/security_SVG 1.svg";
+import svg3 from "../../images/Phone 1.svg";
+import facebook from "../../images/FacebookLogo.svg";
+import instagram from "../../images/InstagramLogo.svg";
+import twitter from "../../images/TwitterLogo.svg";
+import union from "../../images/Union.svg";
+import clipboardtext from "../../images/ClipboardText.svg";
+import printer from "../../images/Printer.svg";
+import shield from "../../images/ShieldCheck.svg";
+import Slider from "react-slick";
 function Navbar() {
+  const settings = {
+    arrows: false,
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 4000,
+    cssEase: "linear",
+  };
   return (
-    < div className="maindiv">
+    <div className="maindiv">
       <div className="main-container">
         <nav className="container">
           <img src={icon} alt="Not find" className="title-image" />
@@ -57,41 +69,101 @@ function Navbar() {
         </div>
       </box2>
       <box2_5 className="box2-5">
-        <div className="boxes2-5">
-          <img src={clipboardtext} alt="" className="img2-5" />
-          <div className="">search</div>
-          <div>
-            Don’t worry if your data is very large, Insignia provides a search
-            engine, which is useful for making it easier to find data
-            effectively saving time.
+        <div
+          style={{
+            background:
+              "radial-gradient(38.2% 50% at 50% 50%, #2E3134 0%, #292B2E 100%)",
+              padding:"4vw ",
+              borderRadius:"2vw",
+              overflow:"visible",
+              width:"60vw",
+              margin:"4vw 0vw 4vw 14vw"
+            
+          }}
+        >
+          <div className="small-text-1 "
+          
+          style={{
+            fontSize:"2vw",
+            margin:"2vw 0vw"
+          }}
+          >
+            Features
           </div>
-          <div>Learn more</div>
-        </div>
-        <div className="boxes2-5">
-          <img src={printer} alt="" className="img2-5 " />
-          <div>Printout</div>
-          <p>
-            Print out service gives you convenience if someday you need print
-            data, just edit it all and just print it.
-          </p>
-          <div>Learn more</div>
-        </div>
-        <div className="boxes2-5">
-          <img src={shield} alt="" className="img2-5" />
-          <div>Security code</div>
-          <p>
-            Data Security is one of our best facilities. Allows for your files
-            to be safer. The file can be secured with a code or password that
-            you created, so only you can open the file.
-          </p>
+          <Slider
+            {...settings}
+            style={{
+              width: "80vw",
+              overflow: "visible",
+            }}
+          >
+            
+            <div>
+              <div className="boxes2-5">
+                <img src={clipboardtext} alt="" className="img2-5" />
+                <div className="small-text-1">Search Data</div>
+                <div
+                 className="color-w"
+                >
+                  Don’t worry if your data is very large insignia provides a
+                  search engine, which is useful for making it easier to find
+                  data effectively saving time.
+                </div>
+                <div className="small-text-1">Learn more</div>
+              </div>
+            </div>
+            <div>
+              <div className="boxes2-5">
+                <img src={clipboardtext} alt="" className="img2-5" />
+                <div className="small-text-1">Search Data</div>
+                <div
+                className="color-w"
+                >
+                  Don’t worry if your data is very large insignia provides a
+                  search engine, which is useful for making it easier to find
+                  data effectively saving time.
+                </div>
+                <div className="small-text-1">Learn more</div>
+              </div>
+            </div>
+            <div>
+              <div className="boxes2-5">
+                <img src={printer} alt="" className="img2-5 " />
+                <div className="small-text-1">Printout</div>
+                <p  className="color-w">
+                  Print out service gives you convenience if someday you need
+                  print data, just edit it all and just print it.
+                </p>
+                <div className="small-text-1">Learn more</div>
+              </div>
+            </div>
 
-          <div>Learn more</div>
+            <div>
+              <div className="boxes2-5">
+                <img src={shield} alt="" className="img2-5" />
+                <div className="small-text-1">Security code</div>
+                <p  className="color-w">
+                  Data Security is one of our best facilities. Allows for your
+                  files to be safer. The file can be secured with a code or
+                  password that you created, so only you can open the file.
+                </p>
+
+                <div className="small-text-1"
+              
+                >Learn more</div>
+              </div>
+            </div>
+          </Slider>
         </div>
       </box2_5>
-      <box3 className="box3">
+      <box3 className="box3"
+      style={{
+        backgroundColor:"yellow"
+      }}
+      >
         <img src={svg3} alt="" className="svg3" />
         <div className="heading3">Download Our App</div>
-        <div className="content3">
+        <div className="content3 ">
           The place to store various data that you can access at any time
           through the internet and where you can carry it. This very flexible
           storage area has a high level of security. To enter into your own data
@@ -125,16 +197,22 @@ function Navbar() {
             © Insignia™, 2020. All rights reserved.
           </div>
         </div>
-        <div style={{display:"flex",flexDirection:"row",justifyContent:"center"}}>
-        <div className="container2">
-          <ul>
-            <ul className="text  list1 ">About</ul>
-            <ul className="text list2">profile</ul>
-            <ul className="text list3">feature</ul>
-            <ul className="text list4">careers</ul>
-            <ul className="text list5">dw news</ul>
-          </ul>
-        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+          }}
+        >
+          <div className="container2">
+            <ul>
+              <ul className="text  list1 ">About</ul>
+              <ul className="text list2">profile</ul>
+              <ul className="text list3">feature</ul>
+              <ul className="text list4">careers</ul>
+              <ul className="text list5">dw news</ul>
+            </ul>
+          </div>
         </div>
         <div className="container3">
           <ul>
